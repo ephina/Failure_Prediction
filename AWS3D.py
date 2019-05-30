@@ -16,7 +16,7 @@ def main():
     df_colnames = ['attribute1', 'attribute2', 'attribute3', 'attribute4', 'attribute5', 'attribute6', 'attribute7',
                    'attribute8', 'attribute9']
 
-    # slice the dependent variables and find their correlation
+    # slice the independent variables and find their correlation
     df_attr = pd.DataFrame(df_dframe.loc[:,df_colnames])
     df_attr_corr = df_attr.corr(method='pearson')
 
