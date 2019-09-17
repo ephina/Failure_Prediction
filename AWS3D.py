@@ -59,7 +59,7 @@ def main():
 
     df_neuro_class = MLPClassifier(solver='lbfgs',hidden_layer_sizes = (150, ), learning_rate_init=0.00001,random_state = 1,max_iter=10000, activation='relu')
 
-    df_neuro_class.fit(df_test_rec_x,df_test_rec_y)
+    df_neuro_class.fit(df_train_rec_x,df_train_rec_y)
 
     df_pred_y = df_neuro_class.predict(df_test_rec_x)
     tn, fp, fn, tp = confusion_matrix(df_test_rec_y,df_pred_y).ravel()
